@@ -1,5 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<header>
+    <link rel="icon" href="1pound-logo.jpg" type="image/jpg">
+</header>
+        <nav>
+            <a href="about.html">ABOUT ME</a> &nbsp;
+            <a href="career.html">CAREER</a> &nbsp;
+            <a href="school.html">EDUCATION</a> &nbsp;
+            <a href="projects.html">PROJECTS</a> &nbsp;
+        </nav>
+
 <h1>Edit Profile</h1>
 <h3>Update Login Information</h3>
+<div id="profileForm">
 <label for="userName">User Name: </label>
 <input id="userName" type="text" formControlName="userName">
 <br>
@@ -37,3 +50,6 @@
 <br>
 
 <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+<br>
+<br>
+</div>

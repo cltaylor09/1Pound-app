@@ -1,3 +1,5 @@
-#left-text {
-    text-align: left;
-}
+#footer {
+    position: absolute;
+    bottom: 3em;
+    width: 100%;   
+  }
