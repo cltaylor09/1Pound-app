@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<header>
-    <link rel="icon" href="1pound-logo.jpg" type="image/jpg">
-</header>
-        <nav>
-            <a href="about.html">ABOUT ME</a> &nbsp;
-            <a href="career.html">CAREER</a> &nbsp;
-            <a href="school.html">EDUCATION</a> &nbsp;
-            <a href="projects.html">PROJECTS</a> &nbsp;
-        </nav>
+<div id="navbar">
+    <ul>
+        <li><a href="profile.component.html">HOME</a> &nbsp;</li>
+        <li><a href="profile.component.html">PROFILE</a> &nbsp;</li>
+        <li><a href="career.html">WORKOUTS</a> &nbsp;</li>
+        <li><a href="school.html">CALENDAR</a> &nbsp;</li>
+        <li><a href="projects.html">NUTRITION</a> &nbsp;</li>
+    </ul>
+</div>
 
+<br>
 <h1>Edit Profile</h1>
 <h3>Update Login Information</h3>
 <div id="profileForm">
@@ -45,8 +46,6 @@
 <input id="userZip" type="text" formControlName="userZip">
 <br>
 <br>
-
-<p>Update the desired fields</p>
 <br>
 
 <button type="submit" [disabled]="!profileForm.valid">Submit</button>
