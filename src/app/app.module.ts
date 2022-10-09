@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { ProfileComponent } from './profile/profile.component';
+import { CalendarEditorComponent } from './calendar-editor/calendar-editor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProfileComponent
+    ProfileComponent,
+    CalendarEditorComponent
   ],
   imports: [
     BrowserModule,
