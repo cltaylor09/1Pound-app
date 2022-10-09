@@ -1,36 +1,35 @@
+<br>
+<h1>Edit Calendar Entry</h1>
+<div id="calendarForm">
+    <h3>Date</h3>
+    <p>
+        <label for="day"> Day: </label>
+        <input id="day" type="text" formControlName="day">
 
-<h2> Edit Calendar Entry </h2>
+        <label for="month"> Month: </label>
+        <input id="month" type="text" formControlName="month">
 
-<form [formGroup] = "calendarForm" (ngSubmit)="onSubmit()" >
+        <label for="year"> Year: </label>
+        <input id="year" type="text" formControlName="year">
+    </p>
+    <br>
+
     <div>
-      
-        <h3> Date</h3>
+        <h3>Excersie Log</h3>
         <p>
-            <label for="day">Day: </label>
-            <input id="day" type="text" formControlName="day">
-    
-            <label for="month">Month: </label>
-            <input id="month" type="text" formControlName="month">
-    
-            <label for="year">Year: </label>
-            <input id="year" type="text" formControlName="year">
+            <label for="activity">Activity: </label>
+            <input id="activity" type="text" formControlName="activity"><br>
+            <br>
+
+            <label for="muscle">Muscle Group: </label>
+            <input id="muscle" type="text" formControlName="muscle"><br>
+            <br>
+
+            <label for="time">Duration: </label>
+            <input id="time" type="text" formControlName="time"><br>
+            <br>
         </p>
     </div>
 
-<div>
-    <h3> Excersie Log</h3>
-    <p>
-        <label for="activity">Activity: </label>
-        <input id="activity" type="text" formControlName="activity"><br>
-
-        <label for="muscle">Muscle Group: </label>
-        <input id="muscle" type="text" formControlName="muscle"><br>
-
-        <label for="time">Duration: </label>
-        <input id="time" type="text" formControlName="time"><br>
-    </p>
-
+    <button type="submit" [disabled]="!calendarForm.valid">Submit</button>
 </div>
-
-<button type="submit" [disabled]="!calendarForm.valid">Submit</button>
-  </form>
