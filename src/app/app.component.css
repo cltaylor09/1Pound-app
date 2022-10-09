@@ -2,7 +2,7 @@
 
 /* styles.css
    Project: Milestone 1
-   Author: Ashley Gaie
+   Author: Ashley Gaie, Christian Taylor
    Date:  October 5, 2022
 
    */
@@ -25,26 +25,26 @@
     overflow: hidden;
     background-color: #FFFFFF;
     border: 1px solid black;
-  }
-  
-  #navbar li {
+}
+
+#navbar li {
     float: left;
     text-align: center;
-  }
-  
-  #navbar li a {
+}
+
+#navbar li a {
     display: block;
     color: #000000;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-  }
-  
-  /* Change the link color to #111 (black) on hover */
-  #navbar li a:hover {
+}
+
+/* Change the link color to #111 (black) on hover */
+#navbar li a:hover {
     text-align: center;
     background-color: #FFFFFF;
-  }
+}
 
 
 /*************************** Body Section ****************************/
@@ -54,21 +54,21 @@ body {
     margin: 0px;
     padding: 20px;
     margin-left: 10px;
-    margin-right:320px;
+    margin-right: 320px;
     margin-bottom: 10px;
     margin-top: 10px;
     font-size: 18;
 }
 
- 
+
 
 /********** Main Panel Section ************/
 
-.main{
+.main {
     background-color: white;
     padding: 20px;
     margin-left: 10px;
-    margin-right:320px;
+    margin-right: 320px;
     margin-bottom: 10px;
     margin-top: 10px;
     font-size: 18;
@@ -81,36 +81,45 @@ body {
 
 
 /********** Text & Headings Section ************/
-h1{
+h1 {
     font-size: 40px;
     color: #d62626;
     text-align: center;
     margin: 0px;
-    position:relative;
+    position: relative;
 
 }
 
-h2{
+h2 {
     font-size: 36px;
     color: #000000;
     text-align: center;
     margin: 20px;
 }
 
-h3{
+h3 {
     font-size: 20px;
     color: #000000;
     text-align: center;
-} 
-h4{
+}
+
+h4 {
     font-size: 16px;
     color: #000000;
     text-align: right;
 
-} 
+}
 
 #footer {
     position: absolute;
     bottom: 3em;
-    width: 100%;   
-  }
+    width: 100%;
+}
+
+#logo-image {
+    text-align: right;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    margin-top: -6px;
+}
