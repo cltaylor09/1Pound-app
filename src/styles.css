@@ -21,11 +21,11 @@
     font-family: Sans-Serif;
     list-style-type: none;
     text-align: center;
+    margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #FFFFFF;
     border: 1px solid black;
-    margin-left: 50px;
 }
 
 #navbar li {
