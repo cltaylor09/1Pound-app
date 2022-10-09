@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = '1pound';
-  imageSrc = "assets/img/1pound-logo.png" 
+  imageSrc = "assets/img/1pound-logo.png"
   imageAlt = "1Pound"
 }
