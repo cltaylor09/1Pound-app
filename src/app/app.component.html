@@ -2,24 +2,22 @@
 <html lang="en">
 
 <div id="navbar">
-    <ul>
+    <ul class="nav navbar-nav" routerLinkActive="active">
         <div id="logo">
             <img src="{{imageSrc}}" align="right" width="215" height="55" alt="{{imageAlt}}" />
         </div>
-        <li><a href="home-page.component.html">HOME</a> &nbsp;</li>
-        <li><a href="profile.component.html">PROFILE</a> &nbsp;</li>
-        <li><a href="workouts.component.html">WORKOUTS</a> &nbsp;</li>
-        <li><a href="calendar-editor.component.html">CALENDAR</a> &nbsp;</li>
-        <li><a href="nutrition.component.html">NUTRITION</a> &nbsp;</li>
+        <li class="nav-item"><a class="nav-link" routerLink="/home">HOME</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/profile">PROFILE</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/workouts">WORKOUTS</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/calendar">CALENDAR</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/nutrition">NUTRITION</a></li>
     </ul>
 </div>
 
-<app-home-page></app-home-page>
+<router-outlet></router-outlet>
 
 <div id="footer">
     <footer>
         Copyright &copy; 2022 1Pound
     </footer>
 </div>
-
-<router-outlet></router-outlet>

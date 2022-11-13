@@ -1,0 +1,11 @@
+<br>
+<h1>Workouts</h1>
+<div>
+  <ul *ngFor="let workout of workouts let i = index">
+    <li> Muscle Group Worked: {{workout.muscleGroup}} <br> Number of Reps: {{workout.reps}}
+      <button mat-button color="warn" (click)="onDelete(workout._id)">DELETE</button>
+      <button mat-button color="accent" [routerLink]="['/editWorkout', workout._id]">UPDATE</button>
+      <button mat-button color="primary" [routerLink]="['/addWorkout']">ADD</button>
+    </li>
+  </ul>
+</div>

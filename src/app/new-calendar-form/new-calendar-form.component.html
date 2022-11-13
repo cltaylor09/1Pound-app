@@ -1,0 +1,30 @@
+<br>
+<div>
+    <h1>{{mode}} Calendar Entry</h1>
+    <br>
+    <br>
+    <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+        <mat-form-field>
+            <input matInput placeholder="Day" id="day" [(ngModel)]="day" name="day">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Month" id="month" [(ngModel)]="month" name="month">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Year" id="year" [(ngModel)]="year" name="year">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <input matInput placeholder="Activity" id="activity" [(ngModel)]="activity" name="activity">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Duration (in Minutes)" id="duration" [(ngModel)]="duration" name="duration">
+        </mat-form-field>
+        <p>
+            <button type="submit" mat-raised-button color="basic">Submit</button>
+        </p>
+    </form>
+</div>

@@ -1,0 +1,41 @@
+<div>
+    <app-profile-menu></app-profile-menu>
+    <h1>Profile</h1>
+    <h3>{{mode}} Profile Information</h3>
+    <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+
+
+        <mat-form-field>
+            <input matInput placeholder="First Name" id="firstname" [(ngModel)]="firstName" name="firstname">
+        </mat-form-field>
+        <br>
+        <br>
+
+        <mat-form-field>
+            <input matInput placeholder="Last Name" id="lastname" [(ngModel)]="lastName" name="lastname">
+        </mat-form-field>
+        <br>
+        <br>
+
+        <mat-form-field>
+            <input matInput placeholder="Username" id="username" [(ngModel)]="userName" name="username">
+        </mat-form-field>
+        <br>
+        <br>
+
+        <mat-form-field>
+            <input matInput placeholder="Password" id="userpass" [(ngModel)]="userPass" name="userpass">
+        </mat-form-field>
+        <br>
+        <br>
+
+        <mat-form-field>
+            <input matInput placeholder="Email" id="useremail" [(ngModel)]="userEmail" name="useremail">
+        </mat-form-field>
+        <br>
+
+        <p>
+            <button type="submit" mat-raised-button color="basic">Submit</button>
+        </p>
+    </form>
+</div>

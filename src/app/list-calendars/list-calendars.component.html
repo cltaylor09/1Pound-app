@@ -1,0 +1,25 @@
+<div>
+
+  <br>
+  <h1>Calendar</h1>
+  <br>
+
+  <ul *ngFor="let calendar of calendars let i = index">
+
+    <li> {{calendar.month}} {{calendar.day}}, {{calendar.year}} <br>
+
+      {{calendar.activity}} <br>
+
+      {{calendar.duration}} minutes <br>
+
+      <button mat-button color="warn" (click)="onDelete(calendar._id)">DELETE</button>
+
+      <button mat-button color="accent" [routerLink]="['/editCalendar', calendar._id]">UPDATE</button>
+
+      <button mat-button color="primary" [routerLink]="['/addCalendar']">ADD</button>
+
+    </li>
+
+  </ul>
+
+</div>

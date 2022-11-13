@@ -1,0 +1,11 @@
+<app-profile-menu></app-profile-menu>
+
+<h1>Profiles</h1>
+<div id="users">
+    <ul *ngFor="let profile of profiles let i = index">
+        <li>First name: {{profile.firstName}} <br> Username: {{profile.userName}}
+            <button mat-button color="warn" (click)="onDelete(profile._id)">DELETE</button>
+            <button mat-button color="accent" [routerLink]="['/editProfile', profile._id]">UPDATE</button>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,19 @@
+<br>
+<div>
+  <h1>{{mode}} Workout</h1>
+  <br>
+  <br>
+  <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+    <mat-form-field>
+      <input matInput placeholder="Muscle Group" id="musclegroup" [(ngModel)]="muscleGroup" name="musclegroup">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Reps" id="reps" [(ngModel)]="reps" name="reps">
+    </mat-form-field>
+
+    <p>
+      <button type="submit" mat-raised-button color="basic">Submit</button>
+    </p>
+  </form>
+</div>
