@@ -58,13 +58,13 @@ const appRoutes: Routes = [{
   path: 'editWorkout/:_id', //when students edited
   component: NewWorkoutFormComponent
 }, {
-  path: 'workouts',  //when students listed
+  path: 'listWorkouts',  //when students listed
   component: ListWorkoutsComponent
 }, {
   path: 'addCalendar',  //when students added 
   component: NewCalendarFormComponent
 }, {
-  path: 'calendar',  //when students listed
+  path: 'listCalendars',  //when students listed
   component: ListCalendarsComponent
 }, {
   path: 'editCalendar/:_id', //when students edited 
