@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { HomePageComponent } from './home-page/home-page.component';
-import { NutritionComponent } from './nutrition/nutrition.component';
 import { ListCalendarsComponent } from './list-calendars/list-calendars.component';
 import { NewCalendarFormComponent } from './new-calendar-form/new-calendar-form.component';
 import { CalendarService } from './calendar.service';
@@ -32,6 +31,10 @@ import { Routes, RouterModule } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { WorkoutService } from './workout.service';
 
+import { NewNutritionFormComponent } from './new-nutrition-form/new-nutrition-form.component';
+import { ListNutritionnComponent } from './list-nutritionn/list-nutritionn.component';
+//import { NavigationMenuComponent } from './navigation-menu/navigation-menu.component';
+import { NutritionService } from './nutrition.service';
 
 const appRoutes: Routes = [{
   path: '',  //default component to display
@@ -70,6 +73,15 @@ const appRoutes: Routes = [{
   path: 'editCalendar/:_id', //when students edited 
   component: NewCalendarFormComponent
 }, {
+  path: 'addNutrition',  //when nutritionn added 
+  component: NewNutritionFormComponent
+}, {
+  path: 'editNutrition/:_id', //when nutritionn edited 
+  component: NewNutritionFormComponent
+}, {
+  path: 'listNutritionn',  //when nutritionn listed
+  component: ListNutritionnComponent
+}, {
   path: '**',  //when path cannot be found
   component: NotFoundComponent
 },
@@ -79,7 +91,6 @@ const appRoutes: Routes = [{
   declarations: [
     AppComponent,
     HomePageComponent,
-    NutritionComponent,
     ProfileFormComponent,
     ProfileMenuComponent,
     NotFoundComponent,
@@ -88,6 +99,9 @@ const appRoutes: Routes = [{
     ListCalendarsComponent,
     ListWorkoutsComponent,
     NewWorkoutFormComponent,
+    NewNutritionFormComponent,
+    ListNutritionnComponent,
+    //NavigationMenuComponent,
   ],
   imports: [
     BrowserModule,
@@ -102,7 +116,7 @@ const appRoutes: Routes = [{
     MatIconModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [ProfileService, CalendarService, WorkoutService],
+  providers: [ProfileService, CalendarService, WorkoutService, NutritionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const Profile = require('./models/profile')
 const Calendar = require('./models/calendar')
 const Workout = require('./models/workout')
+const Nutrition = require('./models/nutrition')
 mongoose.connect('mongodb://localhost:27017/Onepound', { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => { console.log("connected"); })
     .catch(() => { console.log("error connecting"); });
@@ -228,6 +229,100 @@ app.get('/workouts/:id', (req, res, next) => {
             res.status(200).json(data)
             console.log(data);
         })
+        .catch(err => {
+            console.log('Error: ${err}');
+            res.status(500).json(err);
+        });
+});
+
+//NUTRITION COMPONENT STARTS HERE
+
+app.get('/nutritionn', (req, res, next) => {
+    //call mongoose method find (MongoDB db.Nutritionn.find())
+    Nutrition.find()
+        //if data is returned, send data as a response 
+        .then(data => res.status(200).json(data))
+        //if error, send internal server error
+        .catch(err => {
+            console.log('Error: ${err}');
+            res.status(500).json(err);
+        });
+
+});
+
+
+//serve incoming post requests to /nutritionn
+app.post('/nutritionn', (req, res, next) => {
+    // create a new nutrition variable and save request’s fields 
+    const nutrition = new Nutrition({
+
+
+        date: req.body.date,
+        meal: req.body.meal,
+        food: req.body.food,
+        calories: req.body.calories
+    });
+    //send the document to the database 
+    nutrition.save()
+        //in case of success
+        .then(() => { console.log('Success'); })
+        //if error
+        .catch(err => { console.log('Error:' + err); });
+});
+
+//:id is a dynamic parameter that will be extracted from the URL
+app.delete("/nutritionn/:id", (req, res, next) => {
+    Nutrition.deleteOne({ _id: req.params.id }).then(result => {
+        console.log(result);
+        res.status(200).json("Deleted!");
+    });
+});
+
+//serve incoming put requests to /nutritionn 
+app.put('/nutritionn/:id', (req, res, next) => {
+    console.log("id: " + req.params.id)
+    // check that the parameter id is valid 
+    if (mongoose.Types.ObjectId.isValid(req.params.id)) {
+
+        Nutrition.findOneAndUpdate(
+            { _id: req.params.id },
+            {
+                $set: {
+
+
+                    date: req.body.date,
+                    meal: req.body.meal,
+                    food: req.body.food,
+                    calories: req.body.calories
+                }
+            },
+            { new: true }
+        )
+            .then((nutrition) => {
+                if (nutrition) { //what was updated 
+                    console.log(nutrition);
+                } else {
+                    console.log("no data exist for this id");
+                }
+            })
+            .catch((err) => {
+                console.log(err);
+            });
+    } else {
+        console.log("please provide correct id");
+    }
+});
+
+//find a nutrition based on the id
+app.get('/nutritionn/:id', (req, res, next) => {
+    //call mongoose method findOne (MongoDB db.Nutritionn.findOne())
+    Nutrition.findOne({ _id: req.params.id })
+        //if data is returned, send data as a response 
+        .then(data => {
+            res.status(200).json(data)
+            console.log(data);
+        })
+        //if error, send internal server error
         .catch(err => {
             console.log('Error: ${err}');
             res.status(500).json(err);

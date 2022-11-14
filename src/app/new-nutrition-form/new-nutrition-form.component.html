@@ -1,0 +1,26 @@
+<br>
+<div>
+    <h1>{{mode}} New Nutrition Form</h1>
+    <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+
+        <mat-form-field>
+            <input matInput placeholder="Date" id="date" [(ngModel)]="date" name="date">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <input matInput placeholder="Breakfast/Lunch/Dinner/Snack" id="meal" [(ngModel)]="meal" name="meal">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <input matInput placeholder="Food Intake" id="food" [(ngModel)]="food" name="food">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <input matInput placeholder="Calories" id="calories" [(ngModel)]="calories" name="calories">
+        </mat-form-field>
+        <br>
+        <p>
+            <button type="submit" mat-raised-button color="basic">Submit</button>
+        </p>
+    </form>
+</div>
